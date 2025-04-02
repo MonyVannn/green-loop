@@ -101,8 +101,8 @@ const mockMessages = [
     text: "Here are some photos of the material:",
     timestamp: "Apr 15, 10:35 AM",
     attachments: [
-      { type: "image", url: "/placeholder.svg?height=200&width=300" },
-      { type: "image", url: "/placeholder.svg?height=200&width=300" },
+      { type: "image", url: "https://i.pinimg.com/736x/4e/f7/b2/4ef7b232cea262e0849fa9155d8e9b89.jpg" },
+      { type: "image", url: "https://i.pinimg.com/736x/db/5b/c5/db5bc584d41f513dd6a4fda728d513b9.jpg" },
     ],
   },
   {

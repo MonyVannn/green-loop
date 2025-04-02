@@ -63,15 +63,15 @@ export function PredictiveAnalytics() {
   return (
     <Card className="border-0 shadow-sm">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-        <div>
+        <div className="w-[90%]">
           <div className="flex items-center gap-2">
             <CardTitle>Predictive Analytics</CardTitle>
-            <Badge className="bg-blue-50 text-blue-800 border-blue-200">
+            {/* <Badge className="bg-blue-50 text-blue-800 border-blue-200">
               <Sparkles className="h-3 w-3 mr-1" />
               AI Forecast
-            </Badge>
+            </Badge> */}
           </div>
-          <CardDescription>Forecast for the next 3 months based on historical patterns</CardDescription>
+          <CardDescription className="w-[30%]">Forecast for the next 3 months </CardDescription>
         </div>
         <Select value={metricType} onValueChange={setMetricType}>
           <SelectTrigger className="w-[180px]">

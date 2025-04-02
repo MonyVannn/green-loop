@@ -113,11 +113,7 @@ export function DashboardNav() {
                     >
                       <item.icon className="h-5 w-5" />
                       {item.title}
-                      {item.role && (
-                        <Badge variant="outline" className="ml-auto text-xs">
-                          {item.role === "producer" ? "Producer" : "Consumer"}
-                        </Badge>
-                      )}
+                   
                     </Link>
                   ))}
                 </nav>
@@ -170,11 +166,7 @@ export function DashboardNav() {
                     className={cn("h-5 w-5", pathname === item.href ? "text-primary" : "text-muted-foreground")}
                   />
                   {item.title}
-                  {item.role && (
-                    <Badge variant="outline" className="ml-auto text-xs">
-                      {item.role === "producer" ? "Producer" : "Consumer"}
-                    </Badge>
-                  )}
+                  
                 </Link>
               ))}
             </nav>

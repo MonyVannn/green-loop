@@ -8,14 +8,14 @@ import { MapPin } from "lucide-react"
 
 // Mock data for heatmap
 const regionData = [
-  { id: 1, name: "Phnom Penh", transactions: 18, costSavings: 1200, color: "#0e4714" },
-  { id: 2, name: "Siem Reap", transactions: 12, costSavings: 850, color: "#1a6e23" },
-  { id: 3, name: "Battambang", transactions: 8, costSavings: 550, color: "#2d8d35" },
-  { id: 4, name: "Kampot", transactions: 6, costSavings: 950, color: "#43aa4a" },
-  { id: 5, name: "Sihanoukville", transactions: 5, costSavings: 650, color: "#62ba68" },
-  { id: 6, name: "Kep", transactions: 3, costSavings: 300, color: "#81ca86" },
-  { id: 7, name: "Kampong Cham", transactions: 2, costSavings: 200, color: "#a0dba3" },
-  { id: 8, name: "Takeo", transactions: 1, costSavings: 150, color: "#beebb1" },
+  { id: 1, name: "California", transactions: 18, costSavings: 1200, color: "#0e4714" },
+  { id: 2, name: "Texas", transactions: 12, costSavings: 850, color: "#1a6e23" },
+  { id: 3, name: "Florida", transactions: 8, costSavings: 550, color: "#2d8d35" },
+  { id: 4, name: "New York", transactions: 6, costSavings: 950, color: "#43aa4a" },
+  { id: 5, name: "Illinois", transactions: 5, costSavings: 650, color: "#62ba68" },
+  { id: 6, name: "Pennsylvania", transactions: 3, costSavings: 300, color: "#81ca86" },
+  { id: 7, name: "Ohio", transactions: 2, costSavings: 200, color: "#a0dba3" },
+  { id: 8, name: "Georgia", transactions: 1, costSavings: 150, color: "#beebb1" },
 ]
 
 export function HeatmapVisualization() {
@@ -23,8 +23,8 @@ export function HeatmapVisualization() {
 
   return (
     <Card className="border-0 shadow-sm">
-      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-        <div>
+      <CardHeader className="flex flex-row items-start justify-between space-y-0 pb-2">
+        <div className="w-full">
           <CardTitle>Geographic Activity</CardTitle>
           <CardDescription>Regional distribution of waste exchange activity</CardDescription>
         </div>
@@ -61,7 +61,6 @@ export function HeatmapVisualization() {
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full" style={{ backgroundColor: region.color }} />
                       <div className="flex items-center">
-                        <MapPin className="h-3.5 w-3.5 mr-1" />
                         <span className="text-sm font-medium">{region.name}</span>
                       </div>
                     </div>

@@ -36,7 +36,7 @@ const transactions = [
     type: "outgoing",
     messages: 3,
     transactionId: "TRX-1001",
-    country: "USA",
+    country: "California",
     amount: "$1,250.00",
   },
   {
@@ -50,7 +50,7 @@ const transactions = [
     type: "outgoing",
     messages: 0,
     transactionId: "TRX-1002",
-    country: "Canada",
+    country: "Texas",
     amount: "$720.00",
   },
   {
@@ -64,7 +64,7 @@ const transactions = [
     type: "outgoing",
     messages: 2,
     transactionId: "TRX-1003",
-    country: "UK",
+    country: "New York",
     amount: "$360.00",
   },
   {
@@ -78,7 +78,7 @@ const transactions = [
     type: "outgoing",
     messages: 1,
     transactionId: "TRX-1004",
-    country: "Germany",
+    country: "Florida",
     amount: "$540.00",
   },
   {
@@ -92,7 +92,7 @@ const transactions = [
     type: "incoming",
     messages: 0,
     transactionId: "TRX-1005",
-    country: "France",
+    country: "Illinois",
     amount: "$900.00",
   },
   {
@@ -106,7 +106,7 @@ const transactions = [
     type: "incoming",
     messages: 0,
     transactionId: "TRX-1006",
-    country: "Spain",
+    country: "Ohio",
     amount: "$225.00",
   },
   {
@@ -120,7 +120,7 @@ const transactions = [
     type: "outgoing",
     messages: 0,
     transactionId: "TRX-1007",
-    country: "Italy",
+    country: "Georgia",
     amount: "$675.00",
   },
 ]
@@ -174,26 +174,6 @@ export default function TransactionsPage() {
     }
   }
 
-  const getCountryFlag = (country: string) => {
-    switch (country) {
-      case "USA":
-        return "🇺🇸"
-      case "Canada":
-        return "🇨🇦"
-      case "UK":
-        return "🇬🇧"
-      case "Germany":
-        return "🇩🇪"
-      case "France":
-        return "🇫🇷"
-      case "Spain":
-        return "🇪🇸"
-      case "Italy":
-        return "🇮🇹"
-      default:
-        return "🌐"
-    }
-  }
 
   const handleMessageClick = (transactionId: number) => {
     router.push(`/dashboard/messages?transaction=${transactionId}`)
@@ -248,13 +228,13 @@ export default function TransactionsPage() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">Show All</SelectItem>
-              <SelectItem value="usa">USA</SelectItem>
-              <SelectItem value="canada">Canada</SelectItem>
-              <SelectItem value="uk">UK</SelectItem>
-              <SelectItem value="germany">Germany</SelectItem>
-              <SelectItem value="france">France</SelectItem>
-              <SelectItem value="spain">Spain</SelectItem>
-              <SelectItem value="italy">Italy</SelectItem>
+                <SelectItem value="california">California</SelectItem>
+                <SelectItem value="texas">Texas</SelectItem>
+                <SelectItem value="new_york">New York</SelectItem>
+                <SelectItem value="florida">Florida</SelectItem>
+                <SelectItem value="illinois">Illinois</SelectItem>
+                <SelectItem value="ohio">Ohio</SelectItem>
+                <SelectItem value="georgia">Georgia</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -377,7 +357,6 @@ export default function TransactionsPage() {
                   </td>
                   <td className="p-3">
                     <div className="flex items-center gap-2">
-                      <span className="text-base">{getCountryFlag(transaction.country)}</span>
                       <span className="text-sm">{transaction.country}</span>
                     </div>
                   </td>

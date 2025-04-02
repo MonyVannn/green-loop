@@ -137,7 +137,7 @@ export default function AnalyticsPage() {
           </div>
         </div>
 
-        <Tabs defaultValue="waste" className="space-y-4">
+        <Tabs defaultValue="impact" className="space-y-4">
           <TabsList>
             <TabsTrigger value="waste">Waste Diversion</TabsTrigger>
             <TabsTrigger value="emissions">CO₂ Emissions</TabsTrigger>

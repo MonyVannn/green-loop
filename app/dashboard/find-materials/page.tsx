@@ -59,7 +59,7 @@ const availableMaterials = [
     location: "Chicago, IL",
     description: "Clean aluminum scrap from manufacturing process. Available for immediate pickup.",
     postedDate: "2 days ago",
-    images: ["/placeholder.svg?height=200&width=300"],
+    images: ["https://i.pinimg.com/736x/c9/3b/7e/c93b7e35ae6870b58e862c4dcdce5089.jpg"],
     aiVerified: true,
     qualityScore: 92,
     demandScore: "High",
@@ -77,7 +77,7 @@ const availableMaterials = [
     location: "Evanston, IL",
     description: "Mixed plastic packaging waste, primarily HDPE and LDPE. Sorted and cleaned.",
     postedDate: "5 days ago",
-    images: ["/placeholder.svg?height=200&width=300"],
+    images: ["https://i.pinimg.com/736x/7e/d4/72/7ed47252fc732a4feae09e298812a2b1.jpg"],
     aiVerified: true,
     qualityScore: 85,
     demandScore: "Medium",
@@ -95,7 +95,7 @@ const availableMaterials = [
     location: "Oak Park, IL",
     description: "Used cardboard boxes in good condition. Various sizes available.",
     postedDate: "1 week ago",
-    images: ["/placeholder.svg?height=200&width=300"],
+    images: ["https://i.pinimg.com/736x/3b/5f/7d/3b5f7d37daf936e2d2365e7e77c41a33.jpg"],
     aiVerified: true,
     qualityScore: 88,
     demandScore: "High",
@@ -113,7 +113,7 @@ const availableMaterials = [
     location: "Naperville, IL",
     description: "Standard wood pallets, some minor damage but mostly in good condition.",
     postedDate: "3 days ago",
-    images: ["/placeholder.svg?height=200&width=300"],
+    images: ["https://i.pinimg.com/736x/f8/e5/4a/f8e54a853c5618f72149e54deba07c5b.jpg"],
     aiVerified: false,
     qualityScore: 75,
     demandScore: "Medium",
@@ -131,7 +131,7 @@ const availableMaterials = [
     location: "Schaumburg, IL",
     description: "Various electronic components including circuit boards and connectors.",
     postedDate: "1 day ago",
-    images: ["/placeholder.svg?height=200&width=300"],
+    images: ["https://i.pinimg.com/736x/6a/75/b4/6a75b4c8392aca32e532758e9cc88d38.jpg"],
     aiVerified: true,
     qualityScore: 90,
     demandScore: "High",
@@ -149,7 +149,7 @@ const availableMaterials = [
     location: "Joliet, IL",
     description: "High-quality steel scrap from automotive parts. Clean and sorted by type.",
     postedDate: "4 days ago",
-    images: ["/placeholder.svg?height=200&width=300"],
+    images: ["https://i.pinimg.com/736x/4a/a8/c6/4aa8c622f06a89b3a77edb2a7726e76d.jpg"],
     aiVerified: true,
     qualityScore: 94,
     demandScore: "High",
@@ -167,7 +167,7 @@ const availableMaterials = [
     location: "Skokie, IL",
     description: "Clean PET bottles from beverage production. Crushed and ready for processing.",
     postedDate: "6 days ago",
-    images: ["/placeholder.svg?height=200&width=300"],
+    images: ["https://i.pinimg.com/736x/fe/41/df/fe41dfac22b98c366ba46da026ee4da7.jpg"],
     aiVerified: true,
     qualityScore: 89,
     demandScore: "Medium",
@@ -646,21 +646,7 @@ export default function FindMaterialsPage() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="flex flex-row md:flex-col gap-2 justify-end">
-                      <Button
-                        className="gap-2"
-                        onClick={(e) => {
-                          e.stopPropagation()
-                          handleContactClick(material.id)
-                        }}
-                      >
-                        <MessageSquare className="h-4 w-4" />
-                        Contact
-                      </Button>
-                      <Button variant="outline" onClick={(e) => e.stopPropagation()}>
-                        View Details
-                      </Button>
-                    </div>
+                   
                   </div>
                 </div>
               </CardContent>
